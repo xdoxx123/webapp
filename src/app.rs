@@ -1,24 +1,24 @@
-use std::default;
+
 
 use ratzilla::ratatui::prelude::*;
 use ratzilla::ratatui::widgets::{Axis, Chart, Dataset};
 use ratzilla::ratatui::{
     Frame,
     layout::Alignment,
-    style::{Color, Style, Stylize},
+    style::{Color, Style},
     symbols,
-    text::Span,
+ 
     widgets::{Block, BorderType, Clear, Paragraph},
 };
 use tachyonfx::Duration;
 use tachyonfx::{Effect, EffectRenderer, EffectTimer, fx};
-pub struct app {
+pub struct App {
     page: i8,
     offset:f64,
     fe: Effect,
 }
 
-impl app {
+impl App {
     pub fn new() -> Self {
         Self {
             page: 0,
